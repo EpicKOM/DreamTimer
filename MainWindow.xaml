@@ -1,0 +1,132 @@
+﻿<Window x:Class="DreamTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Background="{DynamicResource BackgroundColor}"
+        mc:Ignorable="d"
+        Title="DreamTimer" 
+        Height="535" 
+        Width="327"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen" 
+        Activated="WindowActivated" 
+        Deactivated="WindowDeactivated">
+
+    <!--WindowChrome settings to custom Non client area of the title bar color-->
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            CornerRadius="8" 
+            CaptionHeight="26"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <!--Main Window is divided into 3 lines.
+        TitleBar is 26px high, the remaining space is for the content.-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Toolbar Section-->
+        <Grid
+            x:Name="ToolBar"
+            Grid.Row="0"
+            Background="{DynamicResource NavBarColor}">
+
+            <!--Icon and Title Section-->
+            <StackPanel 
+                Orientation="Horizontal"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="10, 0, 0, 0">
+
+                <Image 
+                    Width="18"
+                    Height="18"
+                    Margin="0, 0, 5, 0"
+                    Source="Assets/img/Icone.png"/>
+
+                <TextBlock
+                    Text="DreamTimer"
+                    VerticalAlignment="Center"
+                    Foreground="{DynamicResource TitleColor}"
+                    FontSize="13"
+                    FontWeight="SemiBold"/>
+                
+            </StackPanel>
+
+            <!--Controls Section-->
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Margin="0, 0, 7, 0">
+
+                <Button 
+                    BorderThickness="0"
+                    Width="47" 
+                    Height="26"                     
+                    Background="Transparent"
+                    Foreground="{DynamicResource TitleColor}">
+
+                    <Button.Content>
+                        <materialDesign:PackIcon
+                            Kind="WindowMinimize"/>
+                    </Button.Content>
+                </Button>
+
+                <Button 
+                    BorderThickness="0"
+                    Width="47" 
+                    Height="26"                     
+                    Background="Transparent"
+                    Foreground="{DynamicResource TitleColor}"
+                    Opacity="0.3">
+
+                    <Button.Content>
+                        <materialDesign:PackIcon
+                            Kind="SquareRoundedOutline"/>
+                    </Button.Content>
+                    
+                </Button>
+
+                <Button 
+                    BorderThickness="0"
+                    Width="47" 
+                    Height="26"                     
+                    Background="Transparent"
+                    Foreground="{DynamicResource TitleColor}">
+
+                    <Button.Content>
+                        <materialDesign:PackIcon
+                            Kind="WindowClose"/>
+                    </Button.Content>
+                    
+                </Button>
+                
+            </StackPanel>
+
+        </Grid>
+
+        <Grid
+            Grid.Row="1">
+
+            <Frame
+                x:Name="NavigationFrame"
+                Margin="0, 10, 0, 0"
+                NavigationUIVisibility="Hidden">
+                
+            </Frame>
+
+        </Grid>
+        
+    </Grid>
+
+</Window>

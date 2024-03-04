@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <SolidColorBrush x:Key="BackgroundColor" Color="#1E1F22"/>
+    <SolidColorBrush x:Key="NavBarColor" Color="#2B2D30"/>
+    <SolidColorBrush x:Key="DisabledWindowColor" Color="#3C3F41"/>
+    <SolidColorBrush x:Key="TitleColor" Color="#F0F0F0"/>
+    <SolidColorBrush x:Key="ThemeColor" Color="#01579B"/>
+    <SolidColorBrush x:Key="LightColor" Color="#E0E0E0"/>
+    <SolidColorBrush x:Key="ProgressBarBackgroundColor" Color="#BFE0E0E0"/>
+
+</ResourceDictionary>
